@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package RestaurantService;
+
+service GrpcDinningHallService {
+  rpc SendOrderBack (SendOrderBackRequest) returns (Empty);
+}
+
+message SendOrderBackRequest {
+  string orderId = 1;
+}
+
+message Empty{}
